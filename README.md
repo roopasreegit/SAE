@@ -113,6 +113,4 @@ dashboard/
 - [Bricken et al. 2023](https://transformer-circuits.pub/2023/monosemantic-features/index.html) — Anthropic's version, much larger scale, worth reading alongside
 - [Elhage et al. 2022](https://transformer-circuits.pub/2022/toy_model/index.html) — why superposition happens in the first place, good background
 
----
 
-Substack writeup: [link]
