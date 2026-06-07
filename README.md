@@ -1,6 +1,6 @@
 # Sparse Autoencoders on GPT-2
 
-I came across the Cunningham et al. 2023 paper while going down a rabbit hole on mechanistic interpretability and wanted to actually run it myself rather than just read about it. This is my from scratch implementation.
+I came across the Cunningham et al. 2023 paper while going down a rabbit hole on mechanistic interpretability, after watching a very interesting video by Welch Labs on the same and wanted to actually run it myself rather than just read it. This is my from scratch implementation.
 
 The core question that got me interested: GPT-2 has 768 neurons per layer. That's not a lot, but it somehow represents an enormous number of concepts. How? The answer seems to be that neurons are *polysemantic*, i.e a single neuron responds to completely unrelated things. Token position 42 in layer 8 might fire on French text, and also on code comments, and also on dates. That's weird and makes interpretability really hard.
 
@@ -102,15 +102,15 @@ dashboard/
 ## Things I want to try next
 
 - Training on a larger / more diverse corpus (WikiText-2 is pretty clean English, which probably biases what features emerge)
-- Comparing layer 4 vs layer 8 vs layer 12 — do earlier layers have more syntactic features and later layers more semantic ones?
-- The Anthropic monosemanticity paper uses a much larger expansion factor (up to 131k features on a one-layer model). Curious how quality scales with d_hidden
+- Comparing layer 4 vs layer 8 vs layer 12 to see if earlier layers have more syntactic features and later layers more semantic ones
+- I would also love to explore other phenomena like grokking
 
 ---
 
 ## References
+- [Welch Labs](https://www.youtube.com/watch?v=UGO_Ehywuxc): The youtube video that inspired it all
+- [Cunningham et al. 2023](https://arxiv.org/abs/2309.08600) : the paper this implements
+- [Elhage et al. 2022](https://transformer-circuits.pub/2022/toy_model/index.html): why superposition happens in the first place, good background
 
-- [Cunningham et al. 2023](https://arxiv.org/abs/2309.08600) — the paper this implements
-- [Bricken et al. 2023](https://transformer-circuits.pub/2023/monosemantic-features/index.html) — Anthropic's version, much larger scale, worth reading alongside
-- [Elhage et al. 2022](https://transformer-circuits.pub/2022/toy_model/index.html) — why superposition happens in the first place, good background
 
 
